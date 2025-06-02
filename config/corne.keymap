@@ -9,15 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    macros {
-        M1: M1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp>;
-            label = "M1";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
