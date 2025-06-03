@@ -16,6 +16,13 @@
             bindings = <&kp LEFT_CONTROL &kp LEFT_ARROW>;
             label = "MACRO1";
         };
+
+        macro2: macro2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp RIGHT_ARROW>;
+            label = "MACRO2";
+        };
     };
 
     keymap {
@@ -44,9 +51,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UP_ARROW  &kp C_NEXT    &none      &kp MINUS
-&trans     &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &kp BACKSLASH         &kp LEFT               &kp DOWN      &kp RIGHT     &none      &trans
-&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp C_VOL_DN  &kp C_VOL_UP  &kp SLASH  &trans
+&kp TILDE  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UP_ARROW  &kp C_NEXT  &none      &kp MINUS
+&trans     &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &kp BACKSLASH         &kp LEFT               &kp DOWN      &kp RIGHT   &none      &trans
+&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &macro1       &macro2     &kp SLASH  &trans
                                        &trans        &trans        &trans          &trans                &trans                 &trans
             >;
         };
